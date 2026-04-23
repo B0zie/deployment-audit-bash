@@ -2,62 +2,35 @@
 #Auther:Robert Fisher
 
 
-
 #Task 1
-function countDepDir() {
-   oldCount=0
-   htmlCount=0
-   phpCount=0
-   envCount=0
-   jsonCount=0
-   confCount=0
-   pemCount=0
-   logCount=0
-   shCount=0
-   jsCount=0
-   mdCount=0
-   cssCount=0
-   bakCount=0
-   tmpCount=0
-   
-   #each dir
-for f in $(find . -type f); do
-   case $f
-      ".old")
-           ;;
-      ".html")
-            ;;
-      ".php")
-           ;;
-      ".env")
-           ;;
-      ".json")
-            ;;
-       ".conf")
-            ;;
-       ".pem")
-           ;;
-       ".log")
-           ;;
-       ".sh")
-            ;;
-        ".js")
-           ;; 
-       ".md")
-           ;;
-       ".css")
-           ;; 
-       ".bak")
-          ;;
-       ".tmp")
-         ;;
-           *)
-         ;;
-   esac
-
-done
+function fileTypeCount() {
+   declare -a count
+   #Needs to not search through .git
+   #needs to not include my script in the sum
+   for f in $(find . -type f); do
+     #fileType=${f##*\.}
+     #echo $fileType
+     echo $f   
+   done
 
  
 }
 
-countDepDir
+
+#MENU
+echo "MENU"
+echo "======"
+echo "1) Count file types"
+echo "2)"
+echo "3)"
+read -p "Choose: " choice
+
+case $choice in
+  1)
+      fileTypeCount
+  ;;
+  *)
+   echo Some menu options are not available
+  ;;
+esac
+
