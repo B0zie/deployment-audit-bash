@@ -1,0 +1,50 @@
+[Wed Jan 01 12:00:00.2025] [emerg] [client 192.168.76.173] Syntax error on line 130 of /etc/apache2/apache2.conf
+[Wed Jan 01 12:01:00.2025] [error] [client 192.168.225.136] script not found or unable to stat: /var/www/html/resource_47.html
+[Wed Jan 01 12:02:00.2025] [crit] [client 192.168.97.244] could not bind to port 80: Address already in use
+[Wed Jan 01 12:03:00.2025] [error] [client 192.168.136.81] File does not exist: /var/www/html/resource_92.html
+[Wed Jan 01 12:04:00.2025] [notice] [client 192.168.135.118] connection reset by peer
+[Wed Jan 01 12:05:00.2025] [error] [client 192.168.140.44] script not found or unable to stat: /var/www/html/resource_80.html
+[Wed Jan 01 12:06:00.2025] [warn] [client 192.168.17.77] mod_fcgid: read data timeout in 37 seconds
+[Wed Jan 01 12:07:00.2025] [notice] [client 192.168.118.54] connection reset by peer
+[Wed Jan 01 12:08:00.2025] [error] [client 192.168.180.63] File does not exist: /var/www/html/resource_76.html
+[Wed Jan 01 12:09:00.2025] [error] [client 192.168.0.171] File does not exist: /var/www/html/resource_53.html
+[Wed Jan 01 12:10:00.2025] [error] [client 192.168.185.226] File does not exist: /var/www/html/resource_7.html
+[Wed Jan 01 12:11:00.2025] [error] [client 192.168.183.241] script not found or unable to stat: /var/www/html/resource_52.html
+[Wed Jan 01 12:12:00.2025] [notice] [client 192.168.159.22] connection reset by peer
+[Wed Jan 01 12:13:00.2025] [alert] [client 192.168.115.17] virtual host configuration error in /etc/nginx/sites-enabled
+[Wed Jan 01 12:14:00.2025] [notice] [client 192.168.187.155] connection reset by peer
+[Wed Jan 01 12:15:00.2025] [warn] [client 192.168.139.238] mod_fcgid: read data timeout in 104 seconds
+[Wed Jan 01 12:16:00.2025] [error] [client 192.168.151.12] (13)Permission denied: access to /var/www/html/resource_60.html denied
+[Wed Jan 01 12:17:00.2025] [emerg] [client 192.168.21.246] Syntax error on line 10 of /etc/apache2/apache2.conf
+[Wed Jan 01 12:18:00.2025] [error] [client 192.168.184.69] File does not exist: /var/www/html/resource_14.html
+[Wed Jan 01 12:19:00.2025] [alert] [client 192.168.209.155] virtual host configuration error in /etc/nginx/sites-enabled
+[Wed Jan 01 12:20:00.2025] [error] [client 192.168.170.11] script not found or unable to stat: /var/www/html/resource_92.html
+[Wed Jan 01 12:21:00.2025] [warn] [client 192.168.227.189] mod_fcgid: read data timeout in 34 seconds
+[Wed Jan 01 12:22:00.2025] [alert] [client 192.168.101.172] virtual host configuration error in /etc/nginx/sites-enabled
+[Wed Jan 01 12:23:00.2025] [warn] [client 192.168.107.58] mod_fcgid: read data timeout in 81 seconds
+[Wed Jan 01 12:24:00.2025] [alert] [client 192.168.171.55] virtual host configuration error in /etc/nginx/sites-enabled
+[Wed Jan 01 12:25:00.2025] [warn] [client 192.168.138.154] mod_fcgid: read data timeout in 116 seconds
+[Wed Jan 01 12:26:00.2025] [error] [client 192.168.86.26] File does not exist: /var/www/html/resource_26.html
+[Wed Jan 01 12:27:00.2025] [error] [client 192.168.9.240] script not found or unable to stat: /var/www/html/resource_45.html
+[Wed Jan 01 12:28:00.2025] [emerg] [client 192.168.57.172] Syntax error on line 62 of /etc/apache2/apache2.conf
+[Wed Jan 01 12:29:00.2025] [notice] [client 192.168.129.180] connection reset by peer
+[Wed Jan 01 12:30:00.2025] [error] [client 192.168.122.10] script not found or unable to stat: /var/www/html/resource_52.html
+[Wed Jan 01 12:31:00.2025] [error] [client 192.168.123.85] script not found or unable to stat: /var/www/html/resource_58.html
+[Wed Jan 01 12:32:00.2025] [error] [client 192.168.13.230] script not found or unable to stat: /var/www/html/resource_14.html
+[Wed Jan 01 12:33:00.2025] [error] [client 192.168.53.206] script not found or unable to stat: /var/www/html/resource_25.html
+[Wed Jan 01 12:34:00.2025] [alert] [client 192.168.155.153] virtual host configuration error in /etc/nginx/sites-enabled
+[Wed Jan 01 12:35:00.2025] [error] [client 192.168.33.234] script not found or unable to stat: /var/www/html/resource_56.html
+[Wed Jan 01 12:36:00.2025] [error] [client 192.168.95.94] File does not exist: /var/www/html/resource_75.html
+[Wed Jan 01 12:37:00.2025] [alert] [client 192.168.27.65] virtual host configuration error in /etc/nginx/sites-enabled
+[Wed Jan 01 12:38:00.2025] [error] [client 192.168.229.126] (13)Permission denied: access to /var/www/html/resource_75.html denied
+[Wed Jan 01 12:39:00.2025] [warn] [client 192.168.184.140] mod_fcgid: read data timeout in 63 seconds
+[Wed Jan 01 12:40:00.2025] [notice] [client 192.168.94.38] connection reset by peer
+[Wed Jan 01 12:41:00.2025] [warn] [client 192.168.38.174] mod_fcgid: read data timeout in 34 seconds
+[Wed Jan 01 12:42:00.2025] [warn] [client 192.168.74.246] mod_fcgid: read data timeout in 34 seconds
+[Wed Jan 01 12:43:00.2025] [notice] [client 192.168.167.227] connection reset by peer
+[Wed Jan 01 12:44:00.2025] [crit] [client 192.168.115.216] could not bind to port 80: Address already in use
+[Wed Jan 01 12:45:00.2025] [alert] [client 192.168.54.210] virtual host configuration error in /etc/nginx/sites-enabled
+[Wed Jan 01 12:46:00.2025] [alert] [client 192.168.138.71] virtual host configuration error in /etc/nginx/sites-enabled
+[Wed Jan 01 12:47:00.2025] [error] [client 192.168.163.108] script not found or unable to stat: /var/www/html/resource_7.html
+[Wed Jan 01 12:48:00.2025] [error] [client 192.168.138.173] script not found or unable to stat: /var/www/html/resource_100.html
+[Wed Jan 01 12:49:00.2025] [alert] [client 192.168.38.168] virtual host configuration error in /etc/nginx/sites-enabled
