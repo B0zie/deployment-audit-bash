@@ -40,13 +40,14 @@ function fileScan() {
 warnList=()
    for d in ./* ; do
         dirName=${d##*\.}
+        dirName=${dirName#/}
         #if the dir is not git we do find 
         if [[ $d != ".git" && -d $d ]] ; then
             for f in $(find $d/* -type f); do
                 fileName=${f##*/}
                if [[ $(echo $f | grep 'debug') ]];then
                  warnList+=("$dirName/$fileName")
-               elif [[ $(echo $f | grep '.bak') || $(echo $f | grep '.old') || $(echo $f | grep '.tmp') ]];then
+               elif [[ $(echo $f | grep '\.bak') || $(echo $f | grep '\.old') || $(echo $f | grep '\.tmp') ]];then
                  warnList+=("$dirName/$fileName")
                fi
             done
@@ -58,7 +59,34 @@ warnList=()
 }
 
 
+function cmdScan() {
 
+ output=""
+   for d in ./* ; do
+        dirName=${d##*\.}
+        #if the dir is not git we do find
+        if [[ $d != ".git" && -d $d ]] ; then
+            for f in $(find $d/* -type f); do
+                fileName=${f##*/}
+                if [[ $(echo $f | grep '.sh') ]]; then
+                  if [[ $(cat $f| grep 'rm -rf') ]]; then
+                    output+="$fileName: uses dangerous command rm -rf\n"
+                  fi 
+                  if [[ $(cat $f| grep 'scp') ]]; then
+                    output+="$fileName: uses dangerous command scp\n"
+                  fi
+                  if [[ $(cat $f| grep 'curl') ]]; then
+                    output+="$fileName: uses dangerous command curl\n"
+                  fi
+                  if [[ $(cat $f| grep 'sudo') ]]; then
+                    output+="$fileName: uses dangerous command sudo\n"
+                  fi 
+                fi
+            done
+        fi
+   done
+  echo -e $output
+}
 
 #Main Program LOOP
 until [[ $exitProgram == true ]]; do
@@ -75,15 +103,14 @@ until [[ $exitProgram == true ]]; do
 
    case $choice in
       1)
-         fileTypeCount
-         (fileTypeCount)> task1Output.txt
+         (fileTypeCount)> task1Output.txt && cat task1Output.txt
       ;;
       2) 
-         fileScan
-         (fileScan)> task2Output.txt 
+         
+         (fileScan)> task2Output.txt && cat task2Output.txt
       ;;
       3)
-         echo "Option unavailable :("
+         (cmdScan)> task3Output.txt && cat task3Output.txt
       ;;
       4)
          echo "Option unavailable :("

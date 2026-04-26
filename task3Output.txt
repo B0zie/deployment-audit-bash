@@ -1,0 +1,10 @@
+cleanup.sh: uses dangerous command rm -rf
+cleanup.sh: uses dangerous command scp
+cleanup.sh: uses dangerous command curl
+cleanup.sh: uses dangerous command sudo
+deploy.sh: uses dangerous command rm -rf
+deploy.sh: uses dangerous command scp
+deploy.sh: uses dangerous command curl
+deploy.sh: uses dangerous command sudo
+reboot.sh: uses dangerous command sudo
+
