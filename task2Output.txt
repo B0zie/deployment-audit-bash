@@ -1,0 +1,8 @@
+==Suspicious Files======
+WARNING: suspicious file detected - /admin/access_backup.old
+WARNING: suspicious file detected - /logs/debug.log
+WARNING: suspicious file detected - /static/debug.js
+WARNING: suspicious file detected - /tmp/build.old
+WARNING: suspicious file detected - /tmp/debug_session.bak
+WARNING: suspicious file detected - /tmp/error_dump.tmp
+WARNING: suspicious file detected - /tmp/tempfile.tmp
