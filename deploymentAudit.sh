@@ -58,7 +58,7 @@ warnList=()
 
 }
 
-
+#task3
 function cmdScan() {
 
  output=""
@@ -88,6 +88,61 @@ function cmdScan() {
   echo -e $output
 }
 
+#task4
+function logScan() {
+   output=""
+   for f in $(find ./logs -type f);do
+      fileName=${f##*/}
+      if [[ $fileName == "access.log" ]]; then
+         output+="\nUnique I.P. connections = "
+         output+="$(cat $f |grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'| sort | uniq | wc -l)\n"
+         output+="==Top Site Visits==\n"
+         output+="$(cat $f | grep -Eo '/[a-zA-Z0-9_]*\.html'|sort|uniq -c| sort -nr | head -n 3)\n"
+      elif [[ $fileName == "error.log" ]]; then
+         output+="==File does not exist==\n"
+         output+="$(cat $f | grep  'File does not exist')\n"
+      fi
+   done
+   
+   echo -e "$output"
+}
+
+#task5
+function configScan() {
+   output="====Potentail Secrets in Files=====\n"
+   for d in ./* ; do
+        dirName=${d##*\.}
+        #if the dir is not git we do find
+        if [[ $d != ".git" && -d $d ]] ; then
+            for f in $(find $d/* -type f); do
+                fileName=${f##*/}
+                fileType=${f##*\.}
+                if [[ $fileType == "env" || $fileType == "conf" || $fileType == "json" || $fileType == "pem" ]]; then
+                   
+                   secret=$(cat $f | grep -E '[Ss][Ee][Cc][Rr][Ee][Tt]')
+                   password=$(cat $f | grep -E '[Pp][Aa][Ss]{2}[Ww][Oo][Rr][Dd]')
+                   private=$(cat $f | grep -E '[Pp][Rr][Ii][Vv][Aa][Tt][Ee]')
+
+                   if [[ $secret || $password || $private ]];then
+                      output+="\n$fileName\n"
+                      if [[ $secret ]];then
+                         output+="$secret\n"
+                      fi
+                      if [[ $password ]];then
+                         output+="$password\n"
+                      fi
+                      if [[ $private ]];then
+                         output+="$private\n" 
+                      fi
+                   fi
+                fi
+            done
+            
+        fi
+   done
+   echo -e "$output"
+}
+
 #Main Program LOOP
 until [[ $exitProgram == true ]]; do
    #MENU
@@ -113,16 +168,16 @@ until [[ $exitProgram == true ]]; do
          (cmdScan)> task3Output.txt && cat task3Output.txt
       ;;
       4)
-         echo "Option unavailable :("
+         (logScan)> task4Output.txt && cat task4Output.txt
       ;;
       5)
-         echo "Option unavailable :("
+         (configScan)> task5Output.txt && cat task5Output.txt
       ;;
       [Qq])
          exitProgram=true
       ;;
       *)
-        echo Some menu options are not available
+        echo :::Improper Input:::
       ;;
    esac
 done

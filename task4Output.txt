@@ -1,0 +1,15 @@
+==File does not exist==
+[Wed Jan 01 12:03:00.2025] [error] [client 192.168.136.81] File does not exist: /var/www/html/resource_92.html
+[Wed Jan 01 12:08:00.2025] [error] [client 192.168.180.63] File does not exist: /var/www/html/resource_76.html
+[Wed Jan 01 12:09:00.2025] [error] [client 192.168.0.171] File does not exist: /var/www/html/resource_53.html
+[Wed Jan 01 12:10:00.2025] [error] [client 192.168.185.226] File does not exist: /var/www/html/resource_7.html
+[Wed Jan 01 12:18:00.2025] [error] [client 192.168.184.69] File does not exist: /var/www/html/resource_14.html
+[Wed Jan 01 12:26:00.2025] [error] [client 192.168.86.26] File does not exist: /var/www/html/resource_26.html
+[Wed Jan 01 12:36:00.2025] [error] [client 192.168.95.94] File does not exist: /var/www/html/resource_75.html
+
+Unique I.P. connections = 57
+==Top Site Visits==
+      2 /page1.html
+      1 /page9.html
+      1 /page8.html
+
